@@ -1,0 +1,3 @@
+[submodule "thread-pool-src"]
+	path = thread-pool-src
+	url = https://github.com/Pithikos/C-Thread-Pool.git
