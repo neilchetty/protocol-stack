@@ -4,6 +4,7 @@
 #include <stddef.h>
 #include <stdint.h>
 #include <stdbool.h>
+#include "headers/colors.h"
 
 #define FLAG_BYTE 0x7E
 #define ESC_BYTE  0x7D

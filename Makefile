@@ -20,22 +20,18 @@ all: $(TARGET)
 
 $(TARGET): $(OBJS)
 	@echo "Linking..."
-	$(CC) $(OBJS) -o $(TARGET) $(LDFLAGS)
+	$(CC) $(OBJS) -o $(BUILDDIR)/$(TARGET) $(LDFLAGS)
 	@echo "Build complete: $(TARGET)"
+	@echo "To See Usage Run: ./$(BUILDDIR)/$(TARGET)"
 
 $(BUILDDIR)/%.o: %.c
 	@echo "Compiling $< -> $@"
-	@mkdir -p $(@D) # Create the directory for the object file if it doesn't exist (@D gets the directory part of $@)
+	@mkdir -p $(@D)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	@echo "Cleaning up build artifacts..."
-	rm -rf $(BUILDDIR) $(TARGET) # Remove the entire build directory and the target
+	rm -rf $(BUILDDIR)
 	@echo "Clean complete."
 
-ARGS ?= nic1 nic2
-run: all
-	@echo "Running: ./$(TARGET) $(ARGS)"
-	./$(TARGET) $(ARGS)
-
-.PHONY: all clean run
+.PHONY: all clean

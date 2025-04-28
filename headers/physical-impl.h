@@ -14,6 +14,7 @@
 #include <string.h>
 #include <errno.h>
 #include <ctype.h>
+#include "headers/colors.h"
 
 #define SHARED_MEM_SIZE 2048
 extern int physical_shm_fd;

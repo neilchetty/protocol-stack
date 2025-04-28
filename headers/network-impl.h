@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 #include <stddef.h>
+#include "headers/colors.h"
 
 typedef struct {
     uint16_t total_length;
