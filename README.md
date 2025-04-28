@@ -13,6 +13,11 @@ The implemented layers include:
 * **Physical Layer:** Simulated using POSIX shared memory and semaphores for inter-process communication between two running instances.
 * **Concurrency:** Uses a thread pool (`thpool`) to handle asynchronous processing for packets moving up the stack (Physical -> Data Link, Data Link -> Network, etc.) and optionally for packets moving down (Transport -> Network).
 
+## Watch the simulator in action:
+[Simulator Dempostration Video](https://github.com/user-attachments/assets/37370503-e3a5-4a78-9a60-04ad782e9fde)
+
+# Building
+
 ## Requirements
 
 * **C Compiler:** A standard C compiler like GCC or Clang.
@@ -38,7 +43,7 @@ Make sure that `git` is installed. This project uses `git submodule` for thread-
     ```
 3. Now you are read to build the project.
 
-## Building the Simulator
+## Compiling the Source Code
 
 The project includes a `Makefile` to simplify compilation.
 
